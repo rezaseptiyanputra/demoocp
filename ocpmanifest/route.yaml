@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: demo-ocp
+spec:
+  host: demo-web-ocp.apps.demo.sss.lab
+  port:
+    targetPort: 8081 
+  to:
+    kind: Service
+    name: hello-openshift
