@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ labels:
+   app: html-frontend
+ name: demo-deployment
+spec:
+ replicas: 2
+ selector:
+   matchLabels:
+     app: html-frontend
+ template:
+   metadata:
+     labels:
+       app: html-frontend
+   spec:
+     containers:
+       - image: demo-registry-quay-openshift-operators.apps.demo.sss.lab/quayadmin/demo-web:latest
+         imagePullPolicy: Always
+         name: html-frontend
+         ports:
+           - containerPort: 8081
+     imagePullSecrets:
+     - name: quayadmin-auth01
