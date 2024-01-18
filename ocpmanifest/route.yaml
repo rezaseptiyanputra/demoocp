@@ -8,4 +8,4 @@ spec:
     targetPort: 8081 
   to:
     kind: Service
-    name: hello-openshift
+    name: demoocp-service
