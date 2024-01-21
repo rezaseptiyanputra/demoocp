@@ -1,4 +1,4 @@
-FROM ubi8/php-74
+FROM php:apache
 # Remove default welcome page
 COPY ./index.php /var/www/index.php
 COPY ./hpa.php /var/www/hpa.php
