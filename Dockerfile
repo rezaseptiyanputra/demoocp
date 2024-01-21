@@ -1,6 +1,6 @@
 FROM php:apache
 # Remove default welcome page
-COPY ./index.php /var/www/index.php
-COPY ./hpa.php /var/www/hpa.php
+COPY ./index.php /var/www/html/index.php
+COPY ./hpa.php /var/www/html/hpa.php
 
 EXPOSE 8081
