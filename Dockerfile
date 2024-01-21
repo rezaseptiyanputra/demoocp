@@ -1,6 +1,5 @@
-FROM php:apache
-# Remove default welcome page
-COPY ./index.php /var/www/html/index.php
-COPY ./hpa.php /var/www/html/hpa.php
-
-EXPOSE 8081
+FROM ubi8/php-74
+# Add application sources
+ADD index.php .
+ADD hpa.php .
+CMD /usr/libexec/s2i/run
