@@ -15,7 +15,7 @@ spec:
        app: html-frontend
    spec:
      containers:
-       - image: demo-registry-quay-openshift-operators.apps.demo.sss.lab/quayadmin/demo-web:latest
+       - image: demo-registry-quay-openshift-operators.apps.demo.sss.lab/quayadmin/demo-web:v2
          imagePullPolicy: Always
          name: html-frontend
          ports:
